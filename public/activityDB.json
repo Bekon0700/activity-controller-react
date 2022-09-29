@@ -24,8 +24,8 @@
         "id": 104,
         "title": "Riding Bicycle",
         "image": "https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        "time": 45,
-        "timeUnit": "Minutes"
+        "time": 1,
+        "timeUnit": "Hours"
     },
     {
         "id": 105,
