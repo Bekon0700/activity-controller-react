@@ -1,4 +1,5 @@
 import React from 'react'
+import { activityAddToDB } from '../../utils/storage'
 
 const ActivityCard = ({data, activityTime, setActivityTime}) => {
     const {title, image, time, timeUnit} = data
@@ -6,6 +7,7 @@ const ActivityCard = ({data, activityTime, setActivityTime}) => {
 
     const addToList = (time) => {
         setActivityTime(activityTime + time)
+        activityAddToDB(time)
     }
 
   return (

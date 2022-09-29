@@ -11,7 +11,7 @@ const Activities = ({activities, activityTime, setActivityTime}) => {
         <p>Improve Yourself Workshop</p>
       </div>
       <p className='uppercase text-lg lg:text-xl text-blue-500 font-semibold py-6'>Select your Activities</p>
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6'>
         {
           activities.map(el => <ActivityCard key={el.id} data={el} activityTime={activityTime} setActivityTime={setActivityTime}/>)
         }

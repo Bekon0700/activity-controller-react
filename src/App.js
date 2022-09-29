@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Activities from './components/activity_showCase/Activities'
 import Finisher from './components/activity_finisher/Finisher'
+import { activityAddToDB, getActivitityInfo } from "./utils/storage";
 
 function App() {
   const [activities, setActivities] = useState([])
@@ -12,7 +13,11 @@ function App() {
     .then(res => res.json())
     .then(data =>setActivities(data))
   }, [])
-  console.log(activityTime)
+
+  useEffect(()=> {
+    const pp = getActivitityInfo()
+    setActivityTime(pp['activityTime'])
+  }, [])
   return (
     <div>
       <div className="grid grid-cols-12">
@@ -21,8 +26,8 @@ function App() {
             <Activities activities={activities} activityTime={activityTime} setActivityTime={setActivityTime}/>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-3 bg-[#e3f7ff] px-6 pt-14">
-          <Finisher activityTime={activityTime}/>
+        <div className="col-span-12 lg:col-span-3 bg-[#e3f7ff] px-3 2xl:px-6 pt-14">
+          <Finisher activityTime={activityTime} setActivityTime={setActivityTime}/>
         </div>
       </div>
     </div>
