@@ -15,12 +15,12 @@ function App() {
   return (
     <div>
       <div className="grid grid-cols-12">
-        <div className="col-span-12 md:col-span-9">
-          <div className="w-2/3 mx-auto py-12">
+        <div className="col-span-12 lg:col-span-10">
+          <div className="w-11/12 mx-auto py-12">
             <Activities activities={activities}/>
           </div>
         </div>
-        <div className="col-span-12 md:col-span-3">
+        <div className="col-span-12 lg:col-span-2 border">
           <Finisher />
         </div>
       </div>
